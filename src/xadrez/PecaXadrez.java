@@ -14,4 +14,4 @@ public class PecaXadrez extends Peca{
 	public Color getColor() {
 		return color;
 	}	
-}//class PecaXadrez
+}//class PecaXadrez extends Peca
