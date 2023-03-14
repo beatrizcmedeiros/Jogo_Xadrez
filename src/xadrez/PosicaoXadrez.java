@@ -32,6 +32,6 @@ public class PosicaoXadrez {
 
 	@Override
 	public String toString() {
-		return String.format("%c%d", coluna, linha);
+		return String.format("%d%c", linha, coluna);
 	}
 }// class PosicaoXadrez
