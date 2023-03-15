@@ -43,7 +43,7 @@ public class UI {
 			int linha = Integer.parseInt(s.substring(1));
 			return new PosicaoXadrez(coluna, linha);
 		}catch(RuntimeException e){
-			throw new InputMismatchException("Erro ao ler a posicao do xadrez. Os valores validos devem estar entre a1 ate h8.");
+			throw new InputMismatchException("\nErro ao ler a posicao do xadrez. Os valores validos devem estar entre a1 ate h8.");
 		}
 	}
 

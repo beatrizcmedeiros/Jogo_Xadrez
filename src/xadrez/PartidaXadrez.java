@@ -46,7 +46,9 @@ public class PartidaXadrez {
 
 	private void validaPosicaoOrigem(Posicao origem) {
 		if(!tabuleiro.possuiPeca(origem))
-			throw new ExcecaoDoXadrez("Nao existe nenhuma peca na posicao de origem.");
+			throw new ExcecaoDoXadrez("\nNao existe nenhuma peca na posicao de origem.");
+		if(!tabuleiro.peca(origem).existeAlgumMovimentoPossivel())
+			throw new ExcecaoDoXadrez("\nNao existe nenhuma forma possivel de mover a peca escolhida.");
 	}
 
 	private void colocaNovaPeca(char coluna, int linha, PecaXadrez peca) {
