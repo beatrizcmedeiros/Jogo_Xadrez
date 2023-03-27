@@ -28,6 +28,12 @@ public class Programa {
 				
 				PecaXadrez pecaCapturada = partidaXadrez.realizaMovimentoPeca(origem, destino);
 				
+				System.out.println(pecaCapturada);
+				
+				if(pecaCapturada == null) {
+					System.out.println("\nNulo\n");
+				}
+				
 			}catch (ExcecaoDoXadrez e){
 				System.out.println(e.getMessage());
 				sc.nextLine();
