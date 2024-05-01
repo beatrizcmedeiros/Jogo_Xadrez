@@ -1,6 +1,5 @@
 package xadrez;
 
-import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -121,8 +120,8 @@ public class PartidaXadrez {
 	public PecaXadrez subistituiPecaPromovida(String tipo) {
 		if(promocao == null)
 			throw new IllegalStateException("Nao existe peca para executar a promocao.");
-		if(!tipo.equals("C") && !tipo.equals("B") && !tipo.equals("T") && !tipo.equals("R"))
-			throw new InvalidParameterException("Tipo invalido para promocao.");
+		if(!tipo.equals("C") && !tipo.equals("B") && !tipo.equals("T") && !tipo.equals("R")) 
+			return promocao;
 		
 		Posicao pos = promocao.getPosicaoXadrez().convertePosicao();
 		Peca p = tabuleiro.removePeca(pos);
