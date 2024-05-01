@@ -33,13 +33,18 @@ public class Programa {
 				System.out.print("Destino: ");
 				PosicaoXadrez destino = UI.lePosicaoXadrez(sc);
 				
-				
 				PecaXadrez pecaCapturada = partidaXadrez.realizaMovimentoPeca(origem, destino);
 				
 				System.out.println(pecaCapturada);
 				
 				if(pecaCapturada != null) {
 					capturadas.add(pecaCapturada);
+				}
+				
+				if(partidaXadrez.getPromocao() != null) {
+					System.out.print("\nInforme uma peca para realizar a promocao (C/B/T/R): ");
+					String tipo = sc.nextLine();
+					partidaXadrez.subistituiPecaPromovida(tipo);
 				}
 				
 			}catch (ExcecaoDoXadrez e){
