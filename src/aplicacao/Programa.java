@@ -34,9 +34,7 @@ public class Programa {
 				PosicaoXadrez destino = UI.lePosicaoXadrez(sc);
 				
 				PecaXadrez pecaCapturada = partidaXadrez.realizaMovimentoPeca(origem, destino);
-				
-				System.out.println(pecaCapturada);
-				
+							
 				if(pecaCapturada != null) {
 					capturadas.add(pecaCapturada);
 				}
